@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queer Roast for the Straight Hosts | Live Comedy in West Hollywood</title>
+    <meta name="description" content="Queer comics roast straight comics. Chaos follows. Monthly at Beaches Tropicana, West Hollywood.">
+    <meta property="og:title" content="Queer Roast for the Straight Hosts">
+    <meta property="og:description" content="A roast. A riot. A queer comedy show. Monthly in WeHo.">
+    <meta property="og:type" content="website">
+
+    <!-- 
+    ============================================
+    META PIXEL — REPLACE '1920403088674204' BELOW
+    ============================================
+    1. Go to https://business.facebook.com/events_manager
+    2. Click "Connect Data Sources" > "Web" > "Meta Pixel"
+    3. Name it "Queer Roast Website" and click Create
+    4. Copy the Pixel ID (a long number like 123456789012345)
+    5. Replace 1920403088674204 below with that number
+    -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1920403088674204');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1920403088674204&ev=PageView&noscript=1"/></noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Space+Grotesk:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --neon-pink: #ff2d8b;
+            --neon-magenta: #e930d4;
+            --neon-purple: #b026ff;
+            --deep-purple: #1a0533;
+            --darker-bg: #0d0118;
+            --hot-yellow: #ffe14d;
+            --white: #f0e6ff;
+            --text-muted: #b89fd6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--darker-bg);
+            color: var(--white);
+            font-family: 'Space Grotesk', sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated background grain */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Neon glow ambient light */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120vw;
+            height: 60vh;
+            background: radial-gradient(ellipse at center, rgba(185, 38, 255, 0.15) 0%, rgba(233, 48, 212, 0.08) 40%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        /* ─── LOGO / TITLE ─── */
+        .logo-section {
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .show-title {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: clamp(2rem, 7vw, 3.2rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+            color: var(--white);
+            text-shadow:
+                0 0 10px var(--neon-pink),
+                0 0 30px var(--neon-pink),
+                0 0 60px var(--neon-magenta),
+                0 0 100px var(--neon-purple);
+            animation: flicker 4s infinite alternate;
+        }
+
+        .show-title .for-the {
+            display: block;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.35em;
+            font-weight: 700;
+            letter-spacing: 0.4em;
+            color: var(--hot-yellow);
+            text-shadow:
+                0 0 8px var(--hot-yellow),
+                0 0 20px rgba(255, 225, 77, 0.5);
+            margin: 0.3em 0;
+        }
+
+        @keyframes flicker {
+            0%, 93%, 95%, 97%, 100% { opacity: 1; }
+            94% { opacity: 0.92; }
+            96% { opacity: 0.96; }
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        .tagline strong {
+            color: var(--neon-pink);
+            font-weight: 600;
+        }
+
+        /* ─── NEXT SHOW CARD ─── */
+        .next-show {
+            width: 100%;
+            background: linear-gradient(135deg, rgba(176, 38, 255, 0.12) 0%, rgba(233, 48, 212, 0.08) 100%);
+            border: 1px solid rgba(255, 45, 139, 0.25);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .next-show::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple), transparent);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .next-show-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--neon-magenta);
+            margin-bottom: 0.75rem;
+        }
+
+        .next-show-date {
+            font-family: 'Dela Gothic One', cursive;
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .next-show-venue {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .next-show-venue a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            text-decoration-color: rgba(184, 159, 214, 0.4);
+            text-underline-offset: 3px;
+        }
+
+        .next-show-venue a:hover {
+            color: var(--neon-pink);
+            text-decoration-color: var(--neon-pink);
+        }
+
+        /* ─── CTA BUTTON ─── */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--darker-bg);
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-magenta));
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow:
+                0 0 15px rgba(255, 45, 139, 0.4),
+                0 0 40px rgba(233, 48, 212, 0.2);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow:
+                0 0 20px rgba(255, 45, 139, 0.6),
+                0 0 60px rgba(233, 48, 212, 0.35);
+        }
+
+        .cta-button:active {
+            transform: translateY(0) scale(0.98);
+        }
+
+        .venmo-instructions {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        .venmo-instructions strong {
+            color: var(--white);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid var(--neon-pink);
+            color: var(--neon-pink);
+            font-size: 1rem;
+            padding: 0.85rem 2rem;
+            box-shadow:
+                0 0 10px rgba(255, 45, 139, 0.2),
+                0 0 30px rgba(233, 48, 212, 0.1);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(255, 45, 139, 0.1);
+            color: var(--neon-pink);
+            box-shadow:
+                0 0 15px rgba(255, 45, 139, 0.4),
+                0 0 40px rgba(233, 48, 212, 0.2);
+        }
+
+        .cta-button .arrow {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover .arrow {
+            transform: translateX(3px);
+        }
+
+        /* ─── WHAT IS THIS SECTION ─── */
+        .what-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .what-section h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.4rem;
+            color: var(--hot-yellow);
+            text-shadow: 0 0 15px rgba(255, 225, 77, 0.3);
+            margin-bottom: 1rem;
+        }
+
+        .what-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .what-section p strong {
+            color: var(--white);
+        }
+
+        /* ─── HOW IT WORKS ─── */
+        .steps {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Dela Gothic One', cursive;
+            font-size: 0.9rem;
+            color: var(--darker-bg);
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--text-muted);
+            padding-top: 0.4rem;
+        }
+
+        .step-text strong {
+            color: var(--white);
+        }
+
+        /* ─── SOCIAL PROOF ─── */
+        .social-proof {
+            width: 100%;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        .social-proof blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.6;
+            max-width: 440px;
+            margin: 0 auto 0.5rem;
+        }
+
+        .social-proof cite {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+
+        /* ─── DIVIDER ─── */
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--neon-pink), transparent);
+            border: none;
+        }
+
+        /* ─── EMAIL SIGNUP ─── */
+        .email-section {
+            width: 100%;
+            text-align: center;
+        }
+
+        .email-section h2 {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.3rem;
+            color: var(--hot-yellow);
+            text-shadow: 0 0 15px rgba(255, 225, 77, 0.3);
+            margin-bottom: 0.5rem;
+        }
+
+        .email-section p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 0.5rem;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .email-form input[type="email"] {
+            flex: 1;
+            padding: 0.85rem 1.1rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            background: rgba(176, 38, 255, 0.1);
+            border: 1px solid rgba(255, 45, 139, 0.3);
+            border-radius: 12px;
+            color: var(--white);
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .email-form input[type="email"]::placeholder {
+            color: rgba(184, 159, 214, 0.6);
+        }
+
+        .email-form input[type="email"]:focus {
+            border-color: var(--neon-pink);
+            box-shadow: 0 0 15px rgba(255, 45, 139, 0.15);
+        }
+
+        .email-form button {
+            padding: 0.85rem 1.3rem;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--neon-pink), var(--neon-magenta));
+            color: var(--darker-bg);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .email-form button:hover {
+            box-shadow: 0 0 20px rgba(255, 45, 139, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .email-success {
+            display: none;
+            color: var(--hot-yellow);
+            font-size: 0.95rem;
+            margin-top: 0.75rem;
+        }
+
+        /* ─── FOLLOW ─── */
+        .follow-section {
+            text-align: center;
+        }
+
+        .follow-section a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .follow-section a:hover {
+            color: var(--neon-pink);
+        }
+
+        .follow-section svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ─── FOOTER ─── */
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(184, 159, 214, 0.4);
+            padding-top: 1rem;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 480px) {
+            .page-wrapper {
+                padding: 1.5rem 1rem 2.5rem;
+                gap: 2rem;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-form button {
+                padding: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- LOGO -->
+        <section class="logo-section">
+            <h1 class="show-title">
+                Queer Roast
+                <span class="for-the">for the</span>
+                Straight Hosts
+            </h1>
+            <p class="tagline">A roast. A riot. <strong>A queer comedy cult classic in the making.</strong></p>
+        </section>
+
+        <!-- NEXT SHOW -->
+        <section class="next-show">
+            <div class="next-show-label">Next Show</div>
+            <!--
+                =============================================
+                UPDATE THESE FOR EACH SHOW:
+                1. Change the date text
+                2. Change the TICKET_URL in the <a> tag below
+                =============================================
+            -->
+            <div class="next-show-date">April 16, 2026</div>
+            <div class="next-show-venue">
+                Doors @ 7PM &middot; Show @ 7:30PM &middot;
+                <a href="https://maps.google.com/?q=Beaches+Tropicana+West+Hollywood" target="_blank" rel="noopener">Beaches Tropicana, WeHo</a>
+            </div>
+            <a
+                href="https://venmo.com/andrew-stier-1"
+                target="_blank"
+                rel="noopener"
+                class="cta-button"
+                id="buy-tickets-btn"
+                onclick="trackTicketClick()"
+            >
+                Get Presale Tickets <span class="arrow">&rarr;</span>
+            </a>
+            <p class="venmo-instructions">Venmo <strong>$12.50</strong> to <strong>andrew-stier-1</strong> with your email in the description.</p>
+        </section>
+
+        <hr class="divider">
+
+        <!-- WHAT IS THIS -->
+        <section class="what-section">
+            <h2>Here's the deal</h2>
+            <p>
+                Every month, <strong>queer comedians roast straight comedians</strong> to their faces.
+                Then the straight comics have to survive <strong>dares, challenges, and absolute chaos</strong>.
+            </p>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-text"><strong>The roast.</strong> Our queer comics destroy the straight guests with zero mercy.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-text"><strong>The dares.</strong> The straight hosts face challenges that range from embarrassing to unhinged.</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-text"><strong>The comedy.</strong> A killer line-up of hilarious standup comedians.</div>
+            </div>
+        </section>
+
+        <hr class="divider">
+
+        <!-- SOCIAL PROOF — swap in real quotes when you have them -->
+        <section class="social-proof">
+            <blockquote>"I love queer joy and this show is dripping with it!"</blockquote>
+            <cite>— Erin Cholakian</cite>
+        </section>
+
+        <hr class="divider">
+
+        <!-- EMAIL SIGNUP -->
+        <section class="email-section">
+            <h2>Don't miss a show</h2>
+            <p>Get a heads up before tickets drop. No spam, just roasts.</p>
+            <a href="https://substack.com/@queerroastcomedy" target="_blank" rel="noopener" class="cta-button cta-secondary" onclick="trackEmailSignup()">
+                I'm in <span class="arrow">&rarr;</span>
+            </a>
+        </section>
+
+        <!-- FOLLOW -->
+        <section class="follow-section">
+            <a href="https://www.instagram.com/queerroastcomedy/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                @queerroastcomedy
+            </a>
+        </section>
+
+        <div class="footer">
+            Created by Andrew Stier &middot; Beaches Tropicana, West Hollywood
+        </div>
+    </div>
+
+    <script>
+        // ─── META PIXEL: Track "Get Tickets" click ───
+        function trackTicketClick() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout', {
+                    content_name: 'Queer Roast Tickets',
+                    content_category: 'Comedy Show'
+                });
+            }
+        }
+
+        // ─── META PIXEL: Track Substack signup click ───
+        function trackEmailSignup() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Substack Signup',
+                    content_category: 'Queer Roast Newsletter'
+                });
+            }
+        }
+    </script>
+</body>
+</html>
