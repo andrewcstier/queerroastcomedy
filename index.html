@@ -111,13 +111,21 @@
             font-size: clamp(2rem, 7vw, 3.2rem);
             line-height: 1.1;
             text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             color: var(--white);
+            animation: flicker 4s infinite alternate;
+        }
+
+        .show-title .title-line {
+            display: block;
+            color: #ffffff;
             text-shadow:
                 0 0 10px var(--neon-pink),
                 0 0 30px var(--neon-pink),
                 0 0 60px var(--neon-magenta),
                 0 0 100px var(--neon-purple);
-            animation: flicker 4s infinite alternate;
         }
 
         .show-title .for-the {
@@ -502,6 +510,27 @@
                 display: none;
             }
 
+            body::before {
+                display: none;
+            }
+
+            .show-title {
+                position: relative;
+                z-index: 10;
+                animation: none;
+            }
+
+            .show-title .title-line {
+                isolation: isolate;
+                text-shadow:
+                    0 0 7px var(--neon-pink),
+                    0 0 20px var(--neon-pink);
+            }
+
+            .show-title .for-the {
+                isolation: isolate;
+            }
+
             .email-form {
                 flex-direction: column;
             }
@@ -518,9 +547,10 @@
         <!-- LOGO -->
         <section class="logo-section">
             <h1 class="show-title">
-                Queer Roast
+                <span class="title-line">Queer Roast</span>
                 <span class="for-the">for the</span>
-                Straight Hosts
+                <span class="title-line">Straight</span>
+                <span class="title-line">Hosts</span>
             </h1>
             <p class="tagline">A roast. A riot. <strong>A queer comedy cult classic in the making.</strong></p>
         </section>
