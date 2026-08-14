@@ -669,6 +669,13 @@
                 });
             }
         }
+
+        // Fire Lead event when user clicks into the Substack iframe
+        window.addEventListener('blur', function() {
+            if (document.activeElement && document.activeElement.tagName === 'IFRAME') {
+                trackEmailSignup();
+            }
+        });
     </script>
 </body>
 </html>
